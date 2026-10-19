@@ -2,119 +2,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cybersecurity Portfolio | KAKishore</title>
-  <style>
-    body {
-      margin: 0;
-      background: #0d1117;
-      color: #e6edf3;
-      font-family: Arial, sans-serif;
-      line-height: 1.7;
-    }
-    header, section, footer {
-      max-width: 900px;
-      margin: auto;
-      padding: 35px 25px;
-    }
-    header { padding-top: 80px; }
-    h1 { font-size: 42px; margin-bottom: 5px; }
-    h2 { color: #58a6ff; }
-    .subtitle { color: #a5b4c5; }
-    .card {
-      background: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 12px;
-      padding: 20px;
-      margin: 15px 0;
-    }
-    a { color: #58a6ff; }
-    .button {
-      display: inline-block;
-      padding: 10px 18px;
-      border: 1px solid #58a6ff;
-      border-radius: 8px;
-      text-decoration: none;
-      margin: 10px 10px 0 0;
-    }
-    footer { color: #8b949e; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kumari Amita Kishore | Cybersecurity Portfolio</title>
+<style>
+:root {
+  --bg:#07111f;
+  --panel:#0d2035;
+  --blue:#45b9ff;
+  --text:#eaf4ff;
+  --muted:#9bb2c9;
+  --line:#24415b;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Segoe UI,Arial,sans-serif;
+}
+body::before {
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 80% 15%,#123e6844,transparent 40%),
+    linear-gradient(#17324b18 1px,transparent 1px),
+    linear-gradient(90deg,#17324b18 1px,transparent 1px);
+  background-size:auto,45px 45px,45px 45px;
+  z-index:-1;
+}
+nav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:22px 7%;
+  border-bottom:1px solid var(--line);
+  background:#07111fe8;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+.logo { color:var(--blue); font-weight:800; letter-spacing:2px; }
+nav a { color:var(--muted); text-decoration:none; margin-left:22px; }
+nav a:hover { color:var(--blue); }
+.hero {
+  min-height:75vh;
+  display:flex;
+  align-items:center;
+  padding:70px 9%;
+}
+.hero-content { max-width:750px; }
+.eyebrow {
+  color:var(--blue);
+  letter-spacing:3px;
+  font-size:13px;
+  text-transform:uppercase;
+}
+h1 {
+  font-size:clamp(42px,6vw,76px);
+  line-height:1.1;
+  margin:20px 0;
+}
+h1 span { color:var(--blue); }
+.hero p {
+  font-size:19px;
+  color:var(--muted);
+  max-width:620px;
+}
+.actions { margin-top:32px; }
+.btn {
+  display:inline-block;
+  padding:13px 22px;
+  border-radius:8px;
+  border:1px solid var(--blue);
+  color:var(--blue);
+  text-decoration:none;
+  margin:0 12px 12px 0;
+  transition:.25s;
+}
+.btn.primary {
+  background:var(--blue);
+  color:#06121f;
+  font-weight:700;
+}
+.btn:hover {
+  transform:translateY(-3px);
+  box-shadow:0 0 25px #45b9ff44;
+}
+section { padding:55px 9%; }
+h2 { font-size:30px; margin-bottom:25px; }
+h2 span { color:var(--blue); }
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+.card {
+  background:linear-gradient(145deg,#10263c,#0b192b);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:28px;
+  transition:.25s;
+}
+.card:hover {
+  border-color:var(--blue);
+  transform:translateY(-5px);
+}
+.card h3 { margin-top:0; }
+.card p { color:var(--muted); }
+.status {
+  display:inline-block;
+  color:#78e6c1;
+  font-size:12px;
+  letter-spacing:1px;
+  margin-bottom:12px;
+}
+footer {
+  text-align:center;
+  padding:35px;
+  color:var(--muted);
+  border-top:1px solid var(--line);
+}
+@media(max-width:650px) {
+  nav { flex-wrap:wrap; gap:15px; }
+  nav a { margin:0 12px 0 0; font-size:13px; }
+  .hero { min-height:60vh; }
+}
+</style>
 </head>
 <body>
 
-<header>
-  <h1>Kumari Amita Kishore</h1>
-  <p class="subtitle">
-    Cybersecurity Analyst | Blue Team Focus | Purple Team Mindset
-  </p>
-  <p>
-    Building hands-on experience in security operations,
-    threat detection, incident response, and cloud security.
-  </p>
-  <a class="button" href="https://github.com/KAKishore">GitHub</a>
-  <a class="button" href="https://www.linkedin.com/in/kumari-amita-kishore/">LinkedIn</a>
-</header>
-
-<section>
-  <h2>About Me</h2>
-  <p>
-    Cybersecurity graduate student at Western Governors University
-    pursuing an M.S. in Cybersecurity and Information Assurance.
-    SANS x WiCyS Scholar with a focus on SOC operations,
-    security investigations, and practical defensive security.
-  </p>
-</section>
-
-<section>
-  <h2>Certifications</h2>
-  <div class="card">
-    GIAC GCIH | GIAC GSEC | GIAC GFACT
+<nav>
+  <div class="logo">KAK // BLUE TEAM</div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#focus">Focus</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#connect">Connect</a>
   </div>
-  <div class="card">
-    CompTIA PenTest+ | CompTIA CySA+ | ISC2 CC
-  </div>
-  <div class="card">
-    AWS Certified AI Practitioner
-  </div>
-</section>
+</nav>
 
-<section>
-  <h2>Hands-On Projects</h2>
-  <div class="card">
-    <h3>SOC Home Lab</h3>
-    <p>
-      Building a security monitoring environment using Wazuh,
-      Splunk, Sysmon, Windows, and Linux to investigate
-      security events and document findings.
-    </p>
-    <a href="https://github.com/KAKishore/SOC-Home-Lab">
-      View Project on GitHub →
-    </a>
+<main>
+  <div class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">Security Operations • Threat Detection • Incident Response</div>
+      <h1>Kumari Amita<br><span>Kishore.</span></h1>
+      <p>
+        Blue Team Focus. Purple Team Mindset.
+        Exploring cybersecurity through hands-on security
+        investigations, defensive technologies, and continuous learning.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#portfolio">Explore My Work →</a>
+        <a class="btn" href="https://github.com/KAKishore"
+           target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </div>
+    </div>
   </div>
-</section>
 
-<section>
-  <h2>Technical Focus</h2>
-  <div class="card">
-    SIEM Monitoring | Log Analysis | Incident Response |
-    Threat Detection | Network Security | Cloud Security
-  </div>
-</section>
+  <section id="about">
+    <h2>01 / <span>About</span></h2>
+    <div class="card">
+      <h3>Learning. Building. Investigating.</h3>
+      <p>
+        Cybersecurity graduate student with a focus on security
+        operations, incident investigation, and cloud security.
+        Building practical experience through labs, technical
+        projects, and cybersecurity challenges.
+      </p>
+    </div>
+  </section>
 
-<section>
-  <h2>Connect</h2>
-  <p>
-    Open to cybersecurity internships, entry-level opportunities,
-    collaboration, and professional networking.
-  </p>
-  <a href="https://github.com/KAKishore">GitHub</a> |
-  <a href="https://www.linkedin.com/in/kumari-amita-kishore/">LinkedIn</a>
-</section>
+  <section id="focus">
+    <h2>02 / <span>Areas of Focus</span></h2>
+    <div class="grid">
+      <div class="card">
+        <h3>🛡️ Security Operations</h3>
+        <p>SIEM monitoring, security events, and alert investigation.</p>
+      </div>
+      <div class="card">
+        <h3>🔎 Incident Response</h3>
+        <p>Threat analysis, investigation workflows, and evidence review.</p>
+      </div>
+      <div class="card">
+        <h3>☁️ Cloud Security</h3>
+        <p>Cloud infrastructure, identity, and security controls.</p>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  © 2026 Kumari Amita Kishore
-</footer>
+  <section id="portfolio">
+    <h2>03 / <span>Portfolio</span></h2>
+    <div class="grid">
+      <div class="card">
+        <div class="status">● PROJECT SHOWCASE</div>
+        <h3>SOC Home Lab</h3>
+        <p>Hands-on security monitoring and investigation projects.</p>
+        <a class="btn" href="https://github.com/KAKishore/SOC-Home-Lab"
+           target="_blank" rel="noopener noreferrer">View Project ↗</a>
+      </div>
+      <div class="card">
+        <div class="status">● TO BE EXPANDED</div>
+        <h3>Certifications</h3>
+        <p>Certification badges and verification links will appear here.</p>
+      </div>
+      <div class="card">
+        <div class="status">● TO BE EXPANDED</div>
+        <h3>Resume & Experience</h3>
+        <p>Professional experience, resume, and career journey.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="connect">
+    <h2>04 / <span>Connect</span></h2>
+    <p>Interested in cybersecurity, collaboration, and continuous learning.</p>
+    <a class="btn" href="https://www.linkedin.com/in/kumari-amita-kishore/"
+       target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+    <a class="btn" href="https://github.com/KAKishore"
+       target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+  </section>
+</main>
+
+<footer>© 2026 Kumari Amita Kishore · Blue Team Focus</footer>
 
 </body>
 </html>
